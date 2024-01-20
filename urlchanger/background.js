@@ -5,10 +5,6 @@ chrome.webRequest.onBeforeRequest.addListener(
       url.host = "old.reddit.com"
       return { redirectUrl: url.toString() }
     }
-    if (url.host === "is2.4chan.org") {
-      url.host = "i.4cdn.org"
-      return { redirectUrl: url.toString() }
-    }
   },
   {urls:  ["<all_urls>"]},
   ["blocking"]
